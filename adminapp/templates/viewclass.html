@@ -1,0 +1,34 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+
+<div class="h-full w-full flex flex-col px-[10%] justify-center text-blue-950 ">
+    <div class="h-full w-full mt-6 pb-10 text-4xl font-bold grid place-items-center">
+        <h1>View Classes</h1>
+    </div>
+    <table class="text-center border border-2">
+        <tr>
+            <th class="gap-x-10">Class ID</th>
+            <th class="gap-x-10">Class Name</th>
+            <th class="gap-x-10">No of Seats</th>
+            <th class="gap-x-10">Room No</th>
+            <th class="gap-x-10">Added Date</th>
+            <th class="gap-x-10">Action</th>
+        </tr>
+        {% for c in cl %}
+        <tr>
+            <td class="gap-x-10">{{c.cid}}</td>
+            <td class="gap-x-10">{{c.class_name}}</td>
+            <td class="gap-x-10">{{c.seats}}</td>
+            <td class="gap-x-10">{{c.roomno}}</td>
+            <td class="gap-x-10">{{c.created_date}}</td>
+            <td class="gap-x-10">
+                <a href="#" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

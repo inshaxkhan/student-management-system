@@ -1,0 +1,37 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<div class="h-full w-full px-[10%] text-blue-950 ">
+    <div class="h-full w-full mt-6 pb-10 text-4xl font-bold grid place-items-center">
+        <h1>View Subjects</h1>
+    </div>
+    <table class="flex w-full justify-evenly border border-2">
+        <tr class="">
+            <th class="px-5">Subject ID</th>
+            <th class="px-5">Subject Name</th>
+            <th class="px-5">Class</th>
+            <th class="px-5">Book Name</th>
+            <th class="px-5">Suject Teacher</th>
+            <th class="px-5">Added Date</th>
+            <th class="px-5">Action</th>
+        </tr>
+        
+        {% for s in subj %}
+        <tr>
+            <td class="px-5">{{s.sid}}</th>
+            <td class="px-5">{{s.subject_name}}</th>
+            <td class="px-5">{{s.sclass}}</th>
+            <td class="px-5">{{s.book}}</th>
+            <td class="px-5">{{s.steacher}}</th>
+            <td class="px-5">{{s.created_date}}</th>
+            <td class="flex px-6 gap-2">
+                <i class="fa-regular fa-pen-to-square"></i> &nbsp;
+                <i class="fa-regular fa-trash-can"></i>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

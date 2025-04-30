@@ -1,0 +1,23 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<div class="h-screen w-full px-[23%] bg-slate-50">
+    <div class="add-subject-form h-[70vh] w-[40vw] px-[7%] bg-white py-[3%]">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6">Add Classes</h2>
+            {% if msg %}
+                <div class="bg-green-400 px-5 mx-[5%] h-[30px] absolute rounded-md text-center -mt-6 text-white">
+                    <h1>{{msg}}</h1>
+                </div>
+            {% endif %}
+            <form action="#" method="post" class="space-y-4">
+                {% csrf_token %}
+                <input type="text" name="class_name" placeholder="Class Name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-blue-500" required>
+                <input type="number" name="seats" placeholder="Seats" class="w-full p-3 border border-gray-300 rounded-md focus:outline-blue-500" required>
+                <input type="text" name="roomno" placeholder="Room No" class="w-full p-3 border border-gray-300 rounded-md focus:outline-blue-500" required>
+                <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 focus:outline-blue-500">Submit</button>
+            </form>
+    </div>
+</div>  
+
+{% endblock %}

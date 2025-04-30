@@ -1,0 +1,18 @@
+.metric{
+    width: 25%;
+    padding-top: 20px;
+}
+
+.jaipuria-group-metrics h1{
+    padding-top: 50px;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.jaipuria-group-metrics p{
+    font-weight: 700;
+    font-family:'Times New Roman', Times, serif;
+    padding-top: 40px;
+    font-size: 40px;
+}

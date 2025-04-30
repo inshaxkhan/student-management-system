@@ -1,0 +1,49 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<div class="">
+        <h1 class="text-center text-4xl text-blue-950 font-bold">View Teachers</h1>
+        <div class="text-[15px] mt-5">
+            <table class="border-2">
+                <tr class="flex"> 
+                    <th class="border w-5">ID</th>
+                    <th class="border w-36">Name</th>
+                    <th class="border w-36">Father's Name</th>
+                    <th class="border w-20">Gender</th>
+                    <th class="border w-24">DOB</th>
+                    <th class="border w-28">Phone</th>
+                    <th class="border w-36">Email</th>
+                    <th class="border w-28">Teacher's Class</th>
+                    <th class="border w-24">Address</th>
+                    <th class="border w-16">Salary</th>
+                    <th class="border w-24">Qualification</th>
+                    <th class="border w-48">Added Date</th>
+                    <th class="border w-20">Actions</th>
+                </tr>
+                {% for t in tech %}
+                <tr class="flex text-center">
+                    <td class="border w-5">{{t.id}}</td>
+                    <td class="border w-36">{{t.name}}</td>
+                    <td class="border w-36">{{t.fname}}</td>
+                    <td class="border w-20">{{t.gender}}</td>
+                    <td class="border w-24">{{t.dob}}</td>
+                    <td class="border w-28">{{t.contactno}}</td>
+                    <td class="border w-36">{{t.emailaddress}}</td>
+                    <td class="border w-28">{{t.tclass}}</td>
+                    <td class="border w-24">{{t.address}}</td>
+                    <td class="border w-16">{{t.salary}}</td>
+                    <td class="border w-24">{{t.qualification}}</td>
+                    <td class="border w-48">{{t.created_date}}</td>
+                    <td class="border w-20">
+                        <a href="{% url 'adminapp:delteacher' id=t.id %}" class="btn btn-sm btn-danger"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <a href="{% url 'adminapp:editteacher' id=t.id %}" class="btn btn-sm btn-success"><i class="fa-regular fa-trash-can"></i></a>   
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>    
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+    {% block body %}
+    {% load static %}
+
+<!-- MAIN  -->
+
+        <div class="main h-auto pt-[100px]">
+            <div class="main-banner h-[30%]">
+                <img src="{% static './images/jaipuria-2000x300-banner.png' %}" />
+            </div>
+
+            <div class="main-aboutus h-[35%] px-[15%] py-[75px] text-blue-950 text-justify">
+                <h1 class="font-bold text-3xl">ABOUT US</h1> <br/>
+                <p class="text-base"> <b> Seth Anandram Jaipuria School, Sadhu Campus – Barabanki</b> is committed to <b>‘Empower, Enthuse and Excel’</b>  in providing quality education and ensuring that every child is taught the necessary values to guide him/her through the journey of life. We at Seth Anandram Jaipuria School endow education for LIFE!</p>
+            </div>
+
+            <div class="main-whoweare h-[20%] px-[15%] pb-[80px] text-blue-950 text-justify">
+                <h1 class="font-bold text-2xl">WHO WE ARE</h1>
+                <p class="text-base">Seth Anandram Jaipuria School, Sadhu Campus – Barabanki, is spread over a <b>lush green campus of 2.16 acres.</b> It offers an extensive range of facilities for the all-round development of every child. Every classroom of the school has Digital Smart Boards.
+                    <br/> <br/>
+                    We adopt a child-centric approach to education and recognize talent in our students. New, <b>modern-day pedagogical concepts</b> such as Design Thinking, Literacy and Numeracy Skills are part of the school’s curriculum. We stress on good values like compassion, empathy, kindness, solidarity and tolerance as much as we emphasize on intellect, wit, critical thinking, and analytical reasoning.</p>
+            </div>
+        
+            <div class="main-img-block flex  h-auto">
+                <div class="block-img1  w-[25%]">
+                    <img src="{% static 'images/main-img-1.jpg' %}"/>
+                </div>
+                <div class="block-img1  w-[25%]">
+                    <img src="{% static 'images/main-img-2.jpg' %}"/>
+                </div>
+                <div class="block-img1  w-[25%]">
+                    <img src="{% static 'images/main-img-3.jpg' %}"/>
+                </div>
+                <div class="block-img1  w-[25%]">
+                    <img src="{% static 'images/main-img-4.jpg' %}"/>
+                </div>
+            </div>
+            
+
+<!-- JAIPURIA GROUP  -->
+            <div class="main-jaipuria-group text-blue-900 px-[15%] py-[10%] text-center text-lg">
+                <h1 class="text-center text-3xl font-bold font-serif">THE JAIPURIA GROUP</h1>
+                <br/>
+                <p>Seth Anandram Jaipuria Group of Educational Institutions is a leading conglomerate with the strength of K-12 schools, preschools, management institutes, and a teachers training academy.</p>
+                <br/>
+                <hr style="width:60%; margin:auto;"/>
+                <div class="jaipuria-group-metrics text-center flex justify-center sm:flex flex-wrap">
+                    <div class="w-[290px] metric flex-col ">
+                        <h1>79</h1>
+                        <p>Years of Legacy</p>
+                    </div>
+                    <div class="w-[290px] metric flex-col ">
+                        <h1>20,000+</h1>
+                        <p>Students</p>
+                    </div>
+                    <div class="w-[290px] metric ">
+                        <h1>15,000</h1>
+                        <p>Alumini</p>
+                    </div>
+                    <div class="w-[290px] metric ">
+                        <h1>900+</h1>
+                        <p>Educators</p>
+                    </div>
+                </div>
+            </div>
+
+<!-- TESTIMONIALS -->
+        <div class="main-testimonials py-[3%] px-[15%] bg-yellow-500 h-[70%] ">
+            <div class="pb-[8%]">
+                <h1 class="text-5xl font-serif font-bold text-blue-900 text-center">Real Stories From Real People...</h1>
+            </div>
+
+            <div class="flex gap-[5%] sm:flex flex-wrap mt-10 gap-y-[50px] justify-center">
+
+                <div class="test-card pb-10 w-[350px] bg-yellow-600 bg-opacity-35 rounded-xl px-10 flex-col text-justify ">
+                    <div class="label  h-[150px] w-[150px] rounded-full  border-4 border-yellow-600 bg-pink-300 mx-auto -mt-10">
+                        <img src="{% static 'images/label-img1.png' %}" class="rounded-full"/>
+                    </div>
+                    <div class="label-fullname flex items-center">
+                        <div>
+                            <img src="{% static 'images/quotes-logo-removebg.png' %}" class="h-[100px]" />
+                        </div>
+                        <div class="w-[70%]">
+                            <h1 class="text-base font-bold text-blue-900 text-right">Sweta Agarwal, Parent</h1>
+                        </div>
+                    </div>
+                    <div class="content h-[50%] -mt-5"> Seth Anandram Jaipuria School, Sadhu Campus, has been an incredible experience for my son. The teachers focus on academics and character building, helping him grow into a confident individual. The nurturing environment and personalized attention make a big difference. I’m truly grateful for the school’s commitment.</div>
+                </div>
+
+                <div class="test-card pb-10 w-[350px] bg-yellow-600 bg-opacity-35 rounded-xl px-10 flex-col text-justify ">
+                    <div class="label  h-[150px] w-[150px] rounded-full  border-4 border-yellow-600 bg-pink-300 mx-auto -mt-10">
+                        <img src="{% static 'images/label-img1.png' %}" class="rounded-full"/>
+                    </div>
+                    <div class="label-fullname flex items-center">
+                        <div>
+                            <img src="{% static 'images/quotes-logo-removebg.png' %}" class="h-[100px]" />
+                        </div>
+                        <div class="w-[70%]">
+                            <h1 class="text-base font-bold text-blue-900 text-right">Pooja Mishra, Parent</h1>
+                        </div>
+                    </div>
+                    <div class="content h-[50%] -mt-5">My daughter has flourished at Seth Anandram Jaipuria School, Sadhu Campus. The school’s focus on values, alongside academics, has helped her become more confident and well-rounded. The teachers are supportive and dedicated, ensuring each child’s potential is nurtured. I couldn’t be happier with her development.</div>
+                </div>
+
+                <div class="test-card pb-10 w-[350px] bg-yellow-600 bg-opacity-35 rounded-xl px-10 flex-col text-justify ">
+                    <div class="label  h-[150px] w-[150px] rounded-full  border-4 border-yellow-600 bg-pink-300 mx-auto -mt-10">
+                        <img src="{% static 'images/label-img2.png' %}" class="rounded-full"/>
+                    </div>
+                    <div class="label-fullname flex items-center">
+                        <div>
+                            <img src="{% static 'images/quotes-logo-removebg.png' %}" class="h-[100px]" />
+                        </div>
+                        <div class="w-[70%]">
+                            <h1 class="text-base font-bold text-blue-900 text-right">Rahul Verma, Parent </h1>
+                        </div>
+                    </div>
+                    <div class="content h-[50%] -mt-5">Seth Anandram Jaipuria School, Sadhu Campus, provides an ideal balance of academics and life skills. My daughter enjoys learning here, and I’ve seen remarkable improvements in her confidence and performance. The teachers are caring, and the school's focus on holistic development ensures she’s on the right path for the future.</div>
+                </div>
+
+            </div>
+        </div>
+
+<!-- ANY OTHER SECTION -->
+            <div class="h-[400px]">
+                
+            </div>
+
+        </div>
+
+{% endblock %}

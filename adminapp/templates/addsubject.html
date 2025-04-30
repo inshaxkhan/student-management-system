@@ -1,0 +1,37 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+<div class="h-screen w-full px-[23%] bg-slate-50">
+    <div class="add-subject-form h-[70vh] w-[40vw] px-[7%] bg-white py-[3%]">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6">Add Subjects</h2>
+            {% if msg %}
+                <div class="bg-green-400 px-5 mx-[5%] h-[30px] absolute rounded-md text-center -mt-6 text-white">
+                    <h1>{{msg}}</h1>
+                </div>
+            {% endif %}
+            <form action="#" method="post" class="space-y-4">
+                {% csrf_token %}
+                <input type="text" name="subject_name" placeholder="Subject Name" class="w-full p-3 border border-gray-300 rounded-md focus:outline-blue-500" required>
+                <select name="sclass" class="w-full p-3 border border-gray-300 rounded-md focus:outline-blue-500">
+                    <option value="">Select class</option>
+                    <option value="Class 1">Class 1</option>
+                    <option value="Class 2">Class 2</option>
+                    <option value="Class 3">Class 3</option>
+                    <option value="Class 4">Class 4</option>
+                    <option value="Class 5">Class 5</option>
+                    <option value="Class 6">Class 6</option>
+                    <option value="Class 7">Class 7</option>
+                    <option value="Class 8">Class 8</option>
+                    <option value="Class 9">Class 9</option>
+                    <option value="Class 10">Class 10</option>
+                    <option value="Class 11">Class 11</option>
+                    <option value="Class 12">Class 12</option> 
+                 </select>
+                <input type="text" name="book" placeholder="Book" class="w-full p-3 border border-gray-300 rounded-md focus:outline-blue-500" required>
+                <input type="text" name="steacher" placeholder="Subject Teacher" class="w-full p-3 border border-gray-300 rounded-md focus:outline-blue-500" required>
+                <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 focus:outline-blue-500">Submit</button>
+            </form>
+    </div>
+</div>           
+{% endblock %}

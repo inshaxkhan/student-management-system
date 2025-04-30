@@ -1,0 +1,55 @@
+{% extends 'adminbase.html' %}
+{% load static %}
+{% block admin %}
+
+
+<div class="">
+    <h1 class="text-center text-4xl text-blue-950 font-bold">View Teachers</h1>
+    <div class="text-[15px] mt-5">
+        <table class="border-2">
+            <tr class="flex"> 
+                <th class="border w-16">Roll No</th>
+                <th class="border w-32">Name</th>
+                <th class="border w-32">Father's Name</th>
+                <th class="border w-32">Mother's Name</th>
+                <th class="border w-16">Gender</th>
+                <th class="border w-24">DOB</th>
+                <th class="border w-28">Phone</th>
+                <th class="border w-36">Email</th>
+                <th class="border w-24">Address</th>
+                <th class="border w-16">Class</th>
+                <th class="border w-24">Paid Fees</th>
+                <th class="border w-24">Due Fees</th>
+                <th class="border w-20">Password</th>
+                <th class="border w-24">Picture</th>
+                <th class="border w-48">Added Date</th>
+                <th class="border w-20">Actions</th>
+            </tr>
+            {% for s in stud %}
+            <tr class="flex text-center">
+                <td class="border w-16">{{s.rollno}}</td>
+                <td class="border w-32">{{s.name}}</td>
+                <td class="border w-32">{{s.fname}}</td>
+                <td class="border w-32">{{s.mname}}</td>
+                <td class="border w-16">{{s.gender}}</td>
+                <td class="border w-24">{{s.dob}}</td>
+                <td class="border w-28">{{s.contactno}}</td>
+                <td class="border w-36">{{s.emailaddress}}</td>
+                <td class="border w-24">{{s.address}}</td>
+                <td class="border w-16">{{s.sclass}}</td>
+                <td class="border w-24">{{s.paidfees}}</td>
+                <td class="border w-24">{{s.duefees}}</td>
+                <td class="border w-20">{{s.password}}</td>
+                <td class="border w-24">{{s.pic}}</td>
+                <td class="border w-48">{{s.created_date}}</td>
+                <td class="border w-20">
+                    <a href="#"> <i class="fa-regular fa-pen-to-square"></i> </a>
+                    <a href="#"> <i class="fa-regular fa-trash-can"></i></a>   
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>    
+</div>
+
+{% endblock %}

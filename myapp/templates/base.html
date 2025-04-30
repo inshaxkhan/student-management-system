@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Jaipuria Scool</title>
+</head>
+<body>
+
+    <div class="outer h-auto w-screen min-h-screen ">
+
+
+<!-- NAVBAR -->
+        <div class="navbar h-[100px] flex px-[15%] w-screen z-10 fixed left-0 top-0 bg-white text-[17px] ">
+            <div class="nav-logo w-[22%] ">
+                <img src="{% static './images/full-logo.jpeg' %}"  />
+            </div>
+            <div class="nav-menu w-[78%]">
+                <ul class="py-10 flex flex-wrap justify-end gap-[3%] font-semibold text-blue-900 ">
+                    <a href="{% url 'index' %}"> <li class="hover:text-blue-700">Home</li> </a>
+                    <li class="hover:text-blue-700">Why Jaipuria</li>
+                    <li class="hover:text-blue-700">Our Schools</li>
+                    <li class="hover:text-blue-700">Student Excellence</li>
+                    <li class="hover:text-blue-700">Jaipuria Edge</li>
+                    <a href="{% url 'contactus' %}"> <li class="hover:text-blue-700">Contact Us</li> </a>
+                    <a href="{% url 'login' %}"><li class="hover:text-blue-700">Login</li></a>
+                </ul>
+            </div>
+        </div>
+
+
+<!-- MAIN CONTENT  -->
+    <div class="">
+        {% block body %} 
+    
+        {% endblock %}
+    </div>
+
+
+
+<!-- FOOTER -->
+<div class="footer h-auto flex justify-center px-[10%] bg-blue-950 text-white flex-wrap">
+
+    <div class="footer-aboutus w-[340px]  m-[4%]">
+        <h2 class="font-bold">ABOUT US</h2> <br/>
+        <p class="text-justify text-sm">Seth Anandram Jaipuria School, Sadhu Campus – Barabanki, follows the motto ‘Empower, Enthuse and Excel’ by sparking the students’ curiosity and enthusing and empowering them with knowledge to excel in all aspects of school education. We create life-long learners. Since 2014, the journey scaled up to higher peaks. Seth M.R. Jaipuria School has witnessed exponential growth with 50+ CBSE schools across 44 cities. and is ambitious to reach 75 schools by 2025.</p>
+    </div>
+
+    <div class="footer-quick w-[340px] m-[4%]">
+        <h2 class="font-bold">QUICK LINKS</h2> <br/> 
+        <ul class="text-sm">
+            <li>Feedback Form</li> <hr> <br/> 
+            <li>Career</li> <hr> <br/> 
+            <li>Fee Structure</li> <hr> <br/> 
+            <li>Parent Portal</li> <hr> <br/> 
+        </ul>
+    </div>
+
+    <div class="footer-contact w-[340px]  m-[4%]">
+        <h2 class="font-bold">CONTACT US</h2> <br/>
+        <ul class="text-sm">
+            <li> <b>Seth Anandram Jaipuria School, Sadhu Campus, Barabanki</b>: Village - Jhansapurwa, <br/>
+                Post- Madanpur, Tehsil-Fatehpur, <br/>
+                Barabanki Pincode-225305 <br/><br/>
+            </li>
+
+            <li>Phone: 9044554046, 9044554045 <br/> <br/> </li>
+            <li>Working Days/Hours: <br/>
+                Summer- 08:00 am – 02:00 pm <br/>
+                Winters- 09:00 am – 03:00 pm
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
